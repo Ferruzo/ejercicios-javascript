@@ -84,7 +84,7 @@ if (numero1 > numero2 && numero1 > numero3 )
 {
 	alert(numero1 + " es mayor.")
 }
-else if (numero2 > numero1 && numero2 > numero3 ) 
+else if (numero2 > numero1 && numero2 > numero3 )
 {
 	alert(numero2 + " es mayor.")
 }
@@ -122,11 +122,11 @@ var alumnos = parseInt(prompt("Ingrese el número de alumnos:"))
 var costo
 var autobus = 4000
 
-if (alumnos >= 100) 
+if (alumnos >= 100)
 {
 	costo = alumnos*65
 }
-else if (alumnos >= 50) 
+else if (alumnos >= 50)
 {
 	costo = alumnos*70
 }
@@ -311,7 +311,7 @@ while (numero <= numero_final)
 // Ejercicio 3
 
 // 0 1
-
+/*
 var N = parseInt(prompt("Ingrese N:"))
 var numero_ant = 0
 var numero_actual = 1
@@ -333,7 +333,7 @@ else
 {
 	console.log(0)
 	console.log(1)
-	
+
 	while(numero_veces < N-2)
 	{
 		suma = numero_ant + numero_actual
@@ -345,8 +345,8 @@ else
 		numero_veces++
 	}
 }
-
-// -------------------------------------------------------------------
+*/
+// ---------TIPOS DE DATOS, VARIABLES Y OPERADORES-------------------
 
 // Ejercicio 1
 
@@ -447,7 +447,7 @@ var a12 = prompt ("Ingresa el segundo número de la matriz")
 var a21 = prompt ("Ingresa el tercer número de la matriz")
 var a22 = prompt ("Ingresa el cuarto número de la matriz")
 
-var resultado = a11*a22 - a12*a21 
+var resultado = a11*a22 - a12*a21
 
 alert (resultado)
 */
@@ -455,3 +455,198 @@ alert (resultado)
 // Ejercicio 10
 
 // TAREA
+
+//-----------EJERCICIOS: ESTRUCTURAS CONDICIONALES Y REPETITIVAS EN JAVASCRIPT-----------
+
+// Ejercicio 1
+/*
+var numero1 = 5;
+var numero2 = 8;
+
+if(numero1 <= numero2)
+{
+    alert(numero1 + " no es mayor que " + numero2);
+}
+
+if(numero2 > 0)
+{
+  alert(numero2 + " es positivo");
+}
+
+if(numero1 < 0 || numero1 != 0)
+{
+  alert(numero1 + " es negativo o distinto de cero");
+}
+
+if(numero1++ <= numero2)
+{
+  alert("Incrementar en 1 unidad el valor de " + numero1 + " no lo hace mayor o igual que " + numero2);
+}
+*/
+
+// Ejercicio 2
+
+/*
+var numero = prompt("Ingresa un número para que se muestre su factorial.");
+var resultado = 1;
+
+for(var i = 1; i <= numero; i++)
+{
+  resultado *= i;
+}
+
+alert("El resultado es " + resultado);
+*/
+
+// Ejercicio 3
+/*
+var numero1 = parseInt(prompt("Ingrese el primero número."))
+var numero2 = parseInt(prompt("Ingrese el segundo número."))
+var suma = numero1 + numero2
+var resta = numero1 - numero2
+var division = numero1 / numero2
+var multiplicacion = numero1 * numero2
+
+if (numero1 > numero2)
+{
+	alert("La suma es " + suma + " y la resta es " + resta)
+}
+else if (numero1 == numero2)
+{
+	alert (numero1 + " es igual a " + numero2)
+}
+else
+{
+	alert("la multiplicación es " + multiplicacion + " y la división es " + division)
+}
+*/
+
+//Ejercicio 4
+/*
+var numeroCuenta
+var nombre
+var saldo = 0
+var saldoAcreededor = 0
+
+do
+{
+	numeroCuenta = parseInt(prompt("Ingrese su número de cuenta:"))
+    if (numeroCuenta >= 0)
+	{
+		nombre = prompt("Ingrese su nombre: ")
+		saldo = parseInt(prompt("Saldo actual: "))
+    	if (saldo > 0)
+		{
+        	saldoAcreededor += saldo
+        	document.write(nombre +" tiene estado de cuenta acreededor <br>")
+      	}
+		else if (saldo < 0)
+		{
+			document.write(nombre + " tiene estado de cuenta deudor<br>")
+	  	}
+        else
+        {
+          document.write(nombre +" tiene saldo nulo<br>")
+        }
+    }
+}
+
+while(numeroCuenta > 0)
+{
+	document.write("La suma total de saldos acreedores es: " + saldoAcreededor)
+}
+*/
+
+// Ejercicio 5
+
+//Ejercicio 6
+/*
+var salida
+var suma = 0
+
+for(multiplo = 11; multiplo < 3000; multiplo += 11)
+{
+	salida = salida + multiplo +' '
+	suma += multiplo
+}
+alert(salida + "\nLa Suma de todos ellos es: " + suma)
+*/
+
+// Ejercicio 9
+/*
+var palabra = prompt("Ingrese una de estas palabras: casa, mesa, perro, gato si quiere traducirla al ingles")
+
+switch (palabra)
+{
+    case "casa":document.write("house")
+    break
+    case "mesa":document.write("table")
+    break
+    case "perro":document.write("dog")
+    break
+    case "gato":document.write("cat")
+    break
+}
+*/
+
+//-----------------------------EJERCICIO: ARREGLOS----------------------------
+
+// Ejercicio 1
+/*
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+var numero = prompt("Introduce tu número de DNI (sin la letra)")
+var letra = prompt("Introduce la letra de tu DNI (en mayúsculas)")
+letra = letra.toUpperCase()
+
+if(numero < 0 || numero > 99999999)
+{
+  alert("El número proporcionado no es válido")
+}
+else
+{
+  var letraCalculada = letras[numero % 23]
+  if(letraCalculada != letra)
+  {
+    alert("La letra o el número proporcionados no son correctos")
+  }
+  else
+  {
+    alert("El número de DNI y su letra son correctos")
+  }
+}
+*/
+
+//Ejercicio 2
+/*
+var nombres = [["Javier", "Miguel"], ["Marcelo", "Victor"]]
+
+nombres.push(["Lladocito", "Aldo"])
+
+document.write(nombres)
+*/
+
+// Ejercicio 3
+/*
+var meses = [" Enero", " Febrero", " Marzo", " Abril", " Mayo", " Junio", " Julio", " Agosto", " Setiembre", " Octubre", " Noviembre", " Diciembre"]
+
+alert(meses)
+*/
+
+// Ejercicio 4
+
+// Ejercicio 5
+/*
+var numero
+var suma = 0
+var n_veces = 0
+
+while (n_veces < 10)
+{
+	numero = parseInt(prompt("Ingrese un número:"))
+	suma += numero
+	n_veces += 1
+}
+
+alert("La suma es " + suma)
+*/
