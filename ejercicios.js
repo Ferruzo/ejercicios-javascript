@@ -210,7 +210,10 @@ alert("El costo total es de " + costo)
 
 // Ejercicio 10
 
-// TAREA
+var CostoProduccion = materiaPrima + manoObra + gastosFabricacion
+var precioVenta = costoProduccion + (0.45 * costoProduccion)
+var clave = [1, 2, 3, 4, 5, 6]
+manoObra =
 
 // -------------------------------------------------------------------
 
@@ -649,4 +652,32 @@ while (n_veces < 10)
 }
 
 alert("La suma es " + suma)
+*/
+
+//------------------------------EJERCICIOS: FUNCIONES---------------------------------------
+
+//Ejercicio 1
+/*
+var n1 = parseInt(prompt("Ingrese el primer valor:"))
+var n2 = parseInt(prompt("Ingrese el segundo valor:"))
+var n3 = parseInt(prompt("Ingrese el tercer valor:"))
+
+function numeroMenor(n1, n2, n3)
+{
+	if (n1 < n2 && n1 < n3)
+    {
+		document.write("El menor es:" + n1)
+    }
+    else if (n2 < n3)
+    {
+		document.write("El menor es:" + n2)
+    }
+    else
+    {
+		document.write("El menor es:" + n3)
+    }
+}
+
+document.write("Los tres números son " + n1 + " " + n2 + " " + n3 + "<br>")
+numeroMenor(n1, n2, n3);
 */
