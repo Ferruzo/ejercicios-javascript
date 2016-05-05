@@ -911,3 +911,80 @@ document.write("Los tres números que ingresaste fueron " + a1 + " " + a2 + " " 
 document.write("Los números ordenados de menor a mayor son: ")
 numerosOrdenados(a1, a2, a3)
 */
+
+// Ejercicio 4
+/*
+function info(cadena)
+{
+    var resultado = "La cadena \"" + cadena + "\" "
+    if(cadena == cadena.toUpperCase())
+    {
+        resultado += " la forman mayúsculas." + "<br>"
+    }
+    else if(cadena == cadena.toLowerCase())
+    {
+        resultado += " la forman minúsculas." + "<br>"
+    }
+    else
+    {
+        resultado += " la forman mayúsculas y minúsculas." + "<br>"
+    }
+    return resultado
+}
+
+document.write(info("ONG"))
+document.write(info("se acercan las elecciones."))
+document.write(info("AaBbCcDdEeFfGgHhIiJjKk"))
+*/
+
+// Ejercicio 5
+/*
+function palindromo(cadena)
+{
+    var resultado = "La cadena \" " + cadena + " \" \n "
+    var cadenaOriginal = cadena.toLowerCase()
+    var letrasEspacios = cadenaOriginal.split("")
+    var cadenaSinEspacios = ""
+
+    for(i in letrasEspacios)
+    {
+        if(letrasEspacios[i] != " ")
+        {
+            cadenaSinEspacios += letrasEspacios[i]
+        }
+    }
+
+    var letras = cadenaSinEspacios.split("")
+    var letrasAlReves = cadenaSinEspacios.split("").reverse()
+    var iguales = true
+
+    for(i in letras)
+    {
+        if(letras[i] == letrasAlReves[i])
+        {
+        }
+        else
+        {
+            iguales = false
+        }
+    }
+
+    if(iguales)
+    {
+        resultado += " es un palindromo." + "<br>"
+    }
+    else
+    {
+        resultado += " no es un palindromo." + "<br>"
+    }
+    return resultado
+}
+
+document.write(palindromo("La ruta nos aporto otro paso natural"))
+document.write(palindromo("Esta cadena no es un palindromo"))
+*/
+
+// Ejercicio 6
+
+
+-------------------------------EJERCICIO DE OBJETOS----------------------------
