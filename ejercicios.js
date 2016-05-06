@@ -945,8 +945,11 @@ function palindromo(cadena)
     var resultado = "La cadena \" " + cadena + " \" \n "
     var cadenaOriginal = cadena.toLowerCase()
     var letrasEspacios = cadenaOriginal.split("")
+
     //"La ruta blablabla"
     //letrasEspacios = ["La"," ","ruta"," ","blablabla"]
+
+=======
 
     var cadenaSinEspacios = ""
 
@@ -958,12 +961,16 @@ function palindromo(cadena)
         }
     }
 
+
     //cadenasSinEspacios = "Larutablablabla"
 
     var letras = cadenaSinEspacios.split("")
 
     //letras = ["L","a","r","u"...]
     //letrasAlreves = ["L","a","r",...]
+
+=======
+    var letras = cadenaSinEspacios.split("")
 
     var letrasAlReves = cadenaSinEspacios.split("").reverse()
     var iguales = true
@@ -1085,7 +1092,7 @@ var numero = parseInt(prompt("Ingrese un número."))
 
 function multiplos(numero)
 {
-	for (var multiplo = 0; multiplo <= 9; multiplo++) 
+	for (var multiplo = 0; multiplo <= 9; multiplo++)
 	{
 		var resultado = numero * multiplo
 		document.write(numero + " x " + multiplo + " = " + resultado + "<br>")
@@ -1112,7 +1119,7 @@ digitos(numero)
 
 // Ejercicio 1
 
-var factura1 = 
+var factura1 =
 {
 	nombre_empresa: 'Entel',
 	elementos: [45,56,78],
@@ -1123,7 +1130,7 @@ var factura1 =
 	{
 		for(var indice=0; indice < this.elementos.length; indice++)
 		{
-			this.importe_total += this.elementos[indice] 
+			this.importe_total += this.elementos[indice]
 		}
 	}
 
@@ -1141,5 +1148,5 @@ function Factura(nombre_empresa)
 }
 
 var factura2 = new Factura('claro')
-alert(factura2.nombre_empresa) 
+alert(factura2.nombre_empresa)
 */
