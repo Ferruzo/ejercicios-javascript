@@ -209,12 +209,12 @@ alert("El costo total es de " + costo)
 */
 
 // Ejercicio 10
-
+/*
 var CostoProduccion = materiaPrima + manoObra + gastosFabricacion
 var precioVenta = costoProduccion + (0.45 * costoProduccion)
 var clave = [1, 2, 3, 4, 5, 6]
 manoObra =
-
+*/
 // -------------------------------------------------------------------
 
 // --- EJERCICIO: ESTRUCTURAS REPETITIVAS FOR, WHILE, DO WHILE ---
@@ -456,8 +456,16 @@ alert (resultado)
 */
 
 // Ejercicio 10
+/*
+var a11 = parseInt(prompt("Ingresa el primer número de la matriz"))
+var a12 = parseInt(prompt("Ingresa el segundo número de la matriz"))
+var a21 = parseInt(prompt("Ingresa el tercer número de la matriz"))
+var a22 = parseInt(prompt("Ingresa el cuarto número de la matriz"))
 
-// TAREA
+var resultado = a11 * a22 - a12 * a21
+
+alert("A   =    " + a11 + "         " + a12 + "\n" + "            " + a21 + "         " + a22)
+*/
 
 //-----------EJERCICIOS: ESTRUCTURAS CONDICIONALES Y REPETITIVAS EN JAVASCRIPT-----------
 
@@ -561,6 +569,19 @@ while(numeroCuenta > 0)
 */
 
 // Ejercicio 5
+/*
+var texto = prompt("Ingrese un texto cualquiera.")
+var numeroVeces = parseInt(prompt("Ingrese el número de veces que quiere que se repita."))
+var salida = ""
+numeroVeces = parseInt(numeroVeces, 10)
+
+for(i = 1; i <= numeroVeces; i++)
+{
+	salida += texto + "\n"
+}
+
+alert(salida)
+*/
 
 //Ejercicio 6
 /*
@@ -574,8 +595,74 @@ for(multiplo = 11; multiplo < 3000; multiplo += 11)
 }
 alert(salida + "\nLa Suma de todos ellos es: " + suma)
 */
+/*
+//Ejercicio 7
+
+var lista1 = 0
+var lista2 = 0
+var n_veces = 0
+var numero
+
+while(n_veces < 3)
+{
+    numero = parseInt(prompt("Ingrese un valor para la primera lista:"))
+    lista1 += numero
+    n_veces += 1
+}
+
+n_veces = 0
+
+while(n_veces < 3)
+{
+    numero = parseInt(prompt("Ingrese un valor para la segunda lista:"))
+    lista2 += numero
+    n_veces += 1
+}
+
+if (lista1 > lista2)
+{
+	alert("La Lista 1 tiene mayor valor.")
+}
+else if (lista2 > lista1)
+{
+	alert("La Lista 2 tiene mayor valor.")
+}
+else
+{
+	alert("Las listas poseen el mismo valor.")
+}
+*/
+
+//Ejercicio 8
+/*
+var ladoAB = parseInt(prompt("Ingrese la longitud del lado AB"))
+var ladoAC = parseInt(prompt("Ingrese la longitud del lado AC"))
+var ladoBC = parseInt(prompt("Ingrese la longitud del lado BC"))
+
+if (ladoBC + ladoAC <= ladoBC || ladoAB + ladoBC <= ladoAC || ladoBC + ladoAC <= ladoAB)
+{
+	alert("No es triángulo.")
+}
+else if (ladoAB == ladoAC && ladoAC == ladoBC)
+{
+	alert("El triángulo es equilatero.")
+}
+else if (ladoAC == ladoAB || ladoBC == ladoAB || ladoBC == ladoAC)
+{
+	alert("El triángulo es isósceles.")
+}
+else if (ladoAB * ladoAB + ladoBC * ladoBC == ladoAC * ladoAC || ladoBC * ladoBC + ladoAC * ladoAC == ladoAB * ladoAB)
+{
+	alert("El triángulo es rectángulo.")
+}
+else
+{
+	alert("El triángulo es escaleno.")
+}
+*/
 
 // Ejercicio 9
+
 /*
 var palabra = prompt("Ingrese una de estas palabras: casa, mesa, perro, gato si quiere traducirla al ingles")
 
@@ -590,6 +677,46 @@ switch (palabra)
     case "gato":document.write("cat")
     break
 }
+*/
+
+// Ejercicio 10
+/*
+var numeroDocumento
+var edad
+var sexo
+var totalPersonas = 0
+var numeroVarones = 0
+var numeroMujeres = 0
+var añosCantidadVarones = 0
+
+  do
+{
+	numeroDocumento = parseInt(prompt("Ingrese su número de documento."))
+    if (numeroDocumento > 0)
+    {
+		edad = parseInt(prompt("Ingrese su edad."))
+		sexo = prompt("Ingrese su sexo. (masculino o femenino)")
+		if (sexo == "masculino")
+		{
+        	numeroVarones += 1
+	        if (edad >= 16 && edad <= 65)
+	        {
+				añosCantidadVarones += 1
+	        }
+        }
+		else if (sexo == "femenino")
+		{
+        	numeroMujeres += 1
+		}
+		totalPersonas += 1
+	}
+}
+
+while(numeroDocumento != 0)
+document.write("Total de personas censadas: " +totalPersonas+ "<br>")
+document.write("Número de varones: " +numeroVarones+ "<br>")
+document.write("Numero de mujeres: " +numeroMujeres+ "<br>")
+document.write("Cantidad de varones entre los 16 y 65 años: "+añosCantidadVarones+ "<br>")
 */
 
 //-----------------------------EJERCICIO: ARREGLOS----------------------------
@@ -637,6 +764,38 @@ alert(meses)
 */
 
 // Ejercicio 4
+/*
+var valores = [true, 5, false, "hola", "adios", 2]
+var valor1 = valores[0]
+var valor2 = valores[2]
+
+var resultado = valores[3] > valores[4]
+document.write(resultado + "<br>")
+
+resultado = valor1 || valor2
+document.write(resultado + "<br>")
+
+resultado = valor1 && valor2
+document.write(resultado + "<br>")
+
+var n1 = valores[1]
+var n2 = valores[5]
+
+var suma = n1 + n2
+document.write(suma + "<br>")
+
+var resta = n1 - n2
+document.write(resta + "<br>")
+
+var multiplicacion = n1 * n2
+document.write(multiplicacion + "<br>")
+
+var division = n1 / n2
+document.write(division + "<br>")
+
+var modulo = n1 % n2
+document.write(modulo + "<br>")
+/*
 
 // Ejercicio 5
 /*
@@ -680,4 +839,307 @@ function numeroMenor(n1, n2, n3)
 
 document.write("Los tres números son " + n1 + " " + n2 + " " + n3 + "<br>")
 numeroMenor(n1, n2, n3);
+*/
+
+// Ejercicio 2
+/*
+var numero = parseInt(prompt("Introduce un número entero"))
+
+var r = parImpar(numero)
+
+function parImpar(numero)
+{
+  if(numero % 2 == 0)
+  {
+    alert("El número " + numero + " es " + "par.")
+  }
+  else
+  {
+    alert("El número " + numero + " es " + "impar.")
+  }
+}
+*/
+
+// Ejercicio 3
+/*
+var a1 = parseInt(prompt("Ingresa el primer valor."))
+var a2 = parseInt(prompt("Ingresa el segundo valor."))
+var a3 = parseInt(prompt("Ingresa el tercer valor."))
+
+function numerosOrdenados(a1, a2, a3)
+{
+	if (a1 < a2 && a1 < a3)
+	{
+		document.write(a1 + " ")
+		if (a2 < a3)
+		{
+			document.write(a2 + " " + a3)
+		}
+		else
+		{
+	  	document.write(a3 + " " + a2)
+		}
+	}
+	else if (a2 < a3)
+	{
+		document.write(a2 + " ")
+		if (a1 < a3)
+		{
+			document.write(a1 + " " + a3)
+		}
+		else
+		{
+			document.write(a3 + " " +a1)
+	  	}
+	}
+	else
+	{
+		document.write(a3 + " ")
+		if (a1 < a2)
+		{
+			document.write(a1 + " " + a2)
+		}
+		else
+		{
+			document.write(a2 + " " + a1)
+		}
+	}
+}
+
+
+document.write("Los tres números que ingresaste fueron " + a1 + " " + a2 + " " + a3 + "<br>")
+document.write("Los números ordenados de menor a mayor son: ")
+numerosOrdenados(a1, a2, a3)
+*/
+
+// Ejercicio 4
+/*
+function info(cadena)
+{
+    var resultado = "La cadena \"" + cadena + "\" "
+    if(cadena == cadena.toUpperCase())
+    {
+        resultado += " la forman mayúsculas." + "<br>"
+    }
+    else if(cadena == cadena.toLowerCase())
+    {
+        resultado += " la forman minúsculas." + "<br>"
+    }
+    else
+    {
+        resultado += " la forman mayúsculas y minúsculas." + "<br>"
+    }
+    return resultado
+}
+
+document.write(info("ONG"))
+document.write(info("se acercan las elecciones."))
+document.write(info("AaBbCcDdEeFfGgHhIiJjKk"))
+*/
+
+// Ejercicio 5
+
+/*
+function palindromo(cadena)
+{
+    var resultado = "La cadena \" " + cadena + " \" \n "
+    var cadenaOriginal = cadena.toLowerCase()
+    var letrasEspacios = cadenaOriginal.split("")
+    //"La ruta blablabla"
+    //letrasEspacios = ["La"," ","ruta"," ","blablabla"]
+
+    var cadenaSinEspacios = ""
+
+    for(i in letrasEspacios)
+    {
+        if(letrasEspacios[i] != " ")
+        {
+            cadenaSinEspacios += letrasEspacios[i]
+        }
+    }
+
+    //cadenasSinEspacios = "Larutablablabla"
+
+    var letras = cadenaSinEspacios.split("")
+
+    //letras = ["L","a","r","u"...]
+    //letrasAlreves = ["L","a","r",...]
+
+    var letrasAlReves = cadenaSinEspacios.split("").reverse()
+    var iguales = true
+
+    for(i in letras)
+    {
+        if(letras[i] == letrasAlReves[i])
+        {
+        }
+        else
+        {
+            iguales = false
+        }
+    }
+
+    if(iguales)
+    {
+        resultado += " es un palindromo." + "<br>"
+    }
+    else
+    {
+        resultado += " no es un palindromo." + "<br>"
+    }
+    return resultado
+}
+
+document.write(palindromo("La ruta nos aporto otro paso natural"))
+document.write(palindromo("Esta cadena no es un palindromo"))
+*/
+
+// Ejercicio 6
+
+/*
+var numero1 = parseInt(prompt("Ingrese el primer número:"))
+var numero2 = parseInt(prompt("Ingrese el segundo número:"))
+var operacion = prompt("Ingrese la operación que desee efectuar (x,/,+,-):")
+
+function calculadora(numero1,numero2,operacion)
+{
+	var resultado = 0.0
+
+	if (operacion == 'x')
+	{
+		resultado = numero1*numero2
+	}
+	else if (operacion == '/')
+	{
+		resultado = numero1/numero2
+	}
+	else if (operacion == '+')
+	{
+		resultado = numero1 + numero2
+	}
+	else if (operacion == '-')
+	{
+		resultado = numero1 - numero2
+	}
+	else
+	{
+		alert("Ingrese una operación válida.")
+	}
+
+	alert("El resultado es " + resultado)
+}
+
+calculadora(numero1,numero2,operacion)
+*/
+
+// Ejercicio 7
+
+/*
+var numero1 = parseInt(prompt("Ingrese el primer número:"))
+var numero2 = parseInt(prompt("Ingrese el segundo número:"))
+
+function suma_cuadrado(numero1,numero2)
+{
+	var suma = numero1 + numero2
+	suma *= suma
+	alert("El resultado es " + suma)
+}
+
+suma_cuadrado(numero1,numero2)
+*/
+
+// Ejercicio 8
+
+/*
+var numero = parseInt(prompt("Ingrese un número:"))
+
+function es_primo(numero)
+{
+	var primo = true
+
+	for (var divisor=2; divisor < numero; divisor++)
+	{
+		if (numero%divisor == 0)
+		{
+			primo = false
+		}
+	}
+
+	if (primo == true)
+	{
+		alert("Es primo.")
+	}
+	else
+	{
+	alert("No es primo.")
+	}
+}
+
+es_primo(numero)
+*/
+
+// Ejercicio 9
+
+/*
+var numero = parseInt(prompt("Ingrese un número."))
+
+function multiplos(numero)
+{
+	for (var multiplo = 0; multiplo <= 9; multiplo++) 
+	{
+		var resultado = numero * multiplo
+		document.write(numero + " x " + multiplo + " = " + resultado + "<br>")
+	}
+}
+
+multiplos(numero)
+*/
+
+// Ejercicio 10
+
+/*
+var numero = prompt("Ingrese un número:")
+
+function digitos(numero)
+{
+	alert(numero + " tiene " + numero.length + " dígitos.")
+}
+
+digitos(numero)
+*/
+
+// -------------------------------EJERCICIO DE OBJETOS----------------------------
+
+// Ejercicio 1
+
+var factura1 = 
+{
+	nombre_empresa: 'Entel',
+	elementos: [45,56,78],
+	//igv: 0.18
+	importe_total: 0.0,
+
+	calcular_importe: function()
+	{
+		for(var indice=0; indice < this.elementos.length; indice++)
+		{
+			this.importe_total += this.elementos[indice] 
+		}
+	}
+
+}
+
+alert(factura1.nombre_empresa)
+
+factura1.calcular_importe()
+alert(factura1.importe_total)
+
+/*
+function Factura(nombre_empresa)
+{
+	this.nombre_empresa = nombre_empresa
+}
+
+var factura2 = new Factura('claro')
+alert(factura2.nombre_empresa) 
 */
