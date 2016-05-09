@@ -1118,7 +1118,7 @@ digitos(numero)
 // -------------------------------EJERCICIO DE OBJETOS----------------------------
 
 // Ejercicio 1
-
+/*
 var factura1 =
 {
 	nombre_empresa: 'Entel',
@@ -1150,3 +1150,237 @@ function Factura(nombre_empresa)
 var factura2 = new Factura('claro')
 alert(factura2.nombre_empresa)
 */
+
+// Ejercicio 2
+
+/*
+var primer_cuatrimestre =
+{
+	meses: ["enero","febrero","marzo","abril"],
+	pertenece_cuatrimestre: function(mes)
+	{
+		var pertenece = false
+		for (var ind=0; ind < this.meses.length; ind++)
+		{
+			if (mes.toLowerCase() == this.meses[ind])
+			{
+				pertenece = true
+			}
+		}
+		return pertenece
+	}
+}
+
+var segundo_cuatrimestre =
+{
+	meses: ["mayo","junio","julio","agosto"],
+	pertenece_cuatrimestre: function(mes)
+	{
+		var pertenece = false
+		for (var ind=0; ind < this.meses.length; ind++)
+		{
+			if (mes.toLowerCase() == this.meses[ind])
+			{
+				pertenece = true
+			}
+		}
+		return pertenece
+	}
+}
+
+var tercer_cuatrimestre =
+{
+	meses: ["setiembre","octubre","noviembre","diciembre"],
+	pertenece_cuatrimestre: function(mes)
+	{
+		var pertenece = false
+		for (var ind=0; ind < this.meses.length; ind++)
+		{
+			if (mes.toLowerCase() == this.meses[ind])
+			{
+				pertenece = true
+			}
+		}
+		return pertenece
+	}
+}
+
+var mes = prompt("Ingresa un mes")
+
+if (primer_cuatrimestre.pertenece_cuatrimestre(mes) == true)
+{
+	alert("Estás en el primer cuatrimestre")
+}
+else if (segundo_cuatrimestre.pertenece_cuatrimestre(mes) == true)
+{
+	alert("Estás en el segundo cuatrimestre")
+}
+else if (tercer_cuatrimestre.pertenece_cuatrimestre(mes) == true)
+{
+	alert("Estás en el tercer cuatrimestre")
+}
+
+*/
+
+/*
+var mes = prompt("Ingresa un mes")
+mes = mes.toLowerCase()
+
+if (mes == "enero" || mes == "febrero" || mes == "marzo" || mes == "abril")
+{
+	alert("Estás en el primer cuatrimestre")
+}
+else if (mes == "mayo" || mes == "junio" || mes == "julio" || mes == "agosto")
+{
+	alert("Estás en el segundo cuatrimestre")
+}
+else if (mes == "setiembre" || mes == "octubre" || mes == "noviembre" || mes == "diciembre")
+{
+	alert("Estás en el tercer cuatrimestre")
+}
+*/
+
+// Ejercicio 3
+
+/*
+var mi_dinero = 
+{
+	valor: 0.0,
+	tasa: 0.0,
+	periodo: 0,
+	actualizar_dinero: function()
+	{
+		this.valor = this.valor*Math.pow(1+this.tasa/100,this.periodo)
+	}
+}
+
+var valor = parseInt(prompt("Ingrese su valor."))
+var tasa = parseFloat(prompt("Ingrese su tasa."))
+var periodo = parseInt(prompt("Ingrese su periodo."))
+
+mi_dinero.valor = valor
+mi_dinero.tasa = tasa
+mi_dinero.periodo = periodo
+
+mi_dinero.actualizar_dinero()
+
+document.write("El valor es " + valor + "<br>" +"La tasa es " + tasa + "<br>" + "El periodo es " + periodo + "<br>" + "El resultado es " + mi_dinero.valor)
+*/
+
+/*
+var valor = parseInt(prompt("Ingrese su valor."))
+var tasa = parseFloat(prompt("Ingrese su tasa."))
+var periodo = parseInt(prompt("Ingrese su periodo."))
+
+var valor_futuro = valor*Math.pow(1+tasa/100,periodo)
+
+document.write("El valor es " + valor + "<br>" +"La tasa es " + tasa + "<br>" + "El periodo es " + periodo + "<br>" + "El resultado es " + valor_futuro)
+*/
+
+// Ejercicio 4
+/*
+function Circulo(radio)
+{
+	this.radio = radio
+	this.longitud = 0.0
+	this.area = 0.0
+
+	this.calcular_longitud = function()
+	{
+		this.longitud = 2*Math.PI*this.radio
+	}
+
+	this.calcular_area = function()
+	{
+		this.area = Math.PI*this.radio*this.radio
+	}
+}
+
+var radio = parseFloat(prompt("Ingrese el radio:"))
+
+var mi_circulo = new Circulo(radio)
+mi_circulo.calcular_longitud()
+mi_circulo.calcular_area()
+
+document.write("El circulo de radio " + mi_circulo.radio + " tiene longitud de " + parseInt(mi_circulo.longitud) + " y área de " + parseInt(mi_circulo.area))
+*/
+
+// Ejercicio 5
+
+/*
+var identificador_llamadas = 
+{
+	nombres: ["Javier","Kiara","Francisco","José","Rubén"],
+	numeros: [9,5,3,4,6],
+
+	ubicar_numero: function(numero)
+	{
+		var numero_encontrado = false
+		for(var ind=0; ind < this.numeros.length; ind++)
+		{
+			if (numero == this.numeros[ind])
+			{
+				document.write("El número " + numero + " es de " + this.nombres[ind])
+				numero_encontrado = true
+			}
+		}
+
+		if (numero_encontrado == false)
+		{
+			document.write("Número desconocido.")
+		}
+	}
+
+
+}
+
+var numero = parseInt(prompt("Ingrese un número de teléfono:"))
+identificador_llamadas.ubicar_numero(numero)
+*/
+
+// Ejercicio 6
+/*
+var persona1 = 
+{
+	peso: 0.0,
+	altura: 0.0,
+	masa_corporal: 0.0,
+
+	calcular_masa_corporal: function()
+	{
+		this.masa_corporal = this.peso / (this.altura * this.altura)
+	}
+}
+
+var peso = parseFloat(prompt("Ingrese su peso."))
+var altura = parseFloat(prompt("Ingrese su altura."))
+
+persona1.peso = peso
+persona1.altura = altura
+
+persona1.calcular_masa_corporal()
+alert("Su masa corporal es " + persona1.masa_corporal)
+*/
+
+// Ejercicio 7
+
+var bomba_dispensadora = 
+{
+	costo: 5,
+	litros_disponibles: 100,
+
+	dispensar_gasolina: function(litros_pedidos)
+	{
+		var costo_total = this.costo * litros_pedidos
+		document.write("El costo es " + costo_total)
+		this.litros_disponibles -= litros_pedidos
+
+		if (this.litros_disponibles <= 0)
+		{
+			alert("No hay gasolina.")
+		}
+	}
+}
+
+var gasolina = parseInt(prompt("Ingrese la cantidad de gasolina que desea."))
+bomba_dispensadora.dispensar_gasolina(gasolina)
